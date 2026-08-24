@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mhambientesplanejados.com.br/sitemap.xml
+
+# Bloquear parâmetros desnecessários
+Disallow: /*?*utm_
+Disallow: /*?*fbclid=
