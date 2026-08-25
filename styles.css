@@ -198,15 +198,21 @@ address { font-style: normal; }
     linear-gradient(128deg, #0a1520 0%, var(--navy) 38%, var(--navy-mid) 68%, #3d3428 100%);
 }
 
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.42) saturate(0.88);
+}
+
 .hero-bg::after {
   content: "";
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 75% 48% at 72% 18%, rgba(197, 160, 89, 0.32), transparent 58%),
-    radial-gradient(ellipse 55% 40% at 12% 85%, rgba(197, 160, 89, 0.12), transparent 50%),
-    repeating-linear-gradient(108deg, transparent 0 18px, rgba(255,255,255,0.018) 18px 19px);
-  animation: heroGlow 16s ease-in-out infinite alternate;
+    linear-gradient(180deg, rgba(10, 21, 32, 0.42) 0%, rgba(13, 27, 42, 0.62) 48%, rgba(10, 21, 32, 0.88) 100%),
+    radial-gradient(ellipse 75% 48% at 72% 18%, rgba(197, 160, 89, 0.18), transparent 58%);
 }
 
 .hero-grain {
@@ -384,36 +390,31 @@ address { font-style: normal; }
 .ambiente article { height: 100%; }
 
 .ambiente-visual {
-  height: 9.2rem;
+  aspect-ratio: 4 / 3;
+  height: auto;
   margin-bottom: 1.1rem;
-  background:
-    linear-gradient(
-      148deg,
-      hsl(var(--tone, 210) 22% 16%) 0%,
-      hsl(var(--tone, 210) 18% 26%) 48%,
-      rgba(197, 160, 89, 0.5) 100%
-    );
+  background: var(--navy-mid);
   position: relative;
   overflow: hidden;
 }
 
-.ambiente-visual::before {
-  content: "";
-  position: absolute;
-  inset: 16% 20%;
-  border: 1px solid rgba(245, 244, 242, 0.22);
-  box-shadow: inset 0 0 0 10px rgba(13, 27, 42, 0.18);
+.ambiente-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.ambiente:hover .ambiente-visual img {
+  transform: scale(1.05);
 }
 
 .ambiente-visual::after {
   content: "";
   position: absolute;
-  right: 10%;
-  bottom: 0;
-  width: 40%;
-  height: 58%;
-  background: linear-gradient(180deg, rgba(212, 185, 120, 0.4), transparent);
-  clip-path: polygon(0 22%, 100% 0, 100% 100%, 0 100%);
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(13, 27, 42, 0.35));
+  pointer-events: none;
 }
 
 .ambiente h3 { margin-bottom: 0.3rem; }
@@ -527,6 +528,21 @@ address { font-style: normal; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.06);
+}
+
+.portfolio-item button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
 }
 
 .portfolio-placeholder {
@@ -568,6 +584,77 @@ address { font-style: normal; }
   margin-top: 1.5rem;
   font-size: 0.92rem;
   color: rgba(245, 244, 242, 0.55);
+}
+
+.page-gallery {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2.4rem 0 0;
+}
+
+.page-gallery figure {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--navy-mid);
+}
+
+.page-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--ease);
+}
+
+.page-gallery button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.page-gallery li:hover img {
+  transform: scale(1.05);
+}
+
+.lightbox {
+  border: 0;
+  padding: 0;
+  max-width: min(96vw, 1100px);
+  max-height: 92vh;
+  background: transparent;
+  position: relative;
+}
+
+.lightbox::backdrop {
+  background: rgba(10, 21, 32, 0.88);
+}
+
+.lightbox img {
+  max-width: 96vw;
+  max-height: 88vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0;
+  border-radius: 0;
+  background: var(--navy);
+  color: var(--surface);
+  font-size: 1.4rem;
+  cursor: pointer;
 }
 
 /* ——— Processo ——— */
@@ -888,7 +975,8 @@ address { font-style: normal; }
 
 @media (max-width: 960px) {
   .ambientes-list,
-  .portfolio-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid,
+  .page-gallery { grid-template-columns: repeat(2, 1fr); }
   .processo-steps { grid-template-columns: repeat(2, 1fr); }
   .sobre-grid,
   .contato-grid { grid-template-columns: 1fr; }
@@ -937,7 +1025,8 @@ address { font-style: normal; }
 @media (max-width: 560px) {
   .ambientes-list,
   .processo-steps,
-  .portfolio-grid { grid-template-columns: 1fr; }
+  .portfolio-grid,
+  .page-gallery { grid-template-columns: 1fr; }
 
   .hero-actions { flex-direction: column; }
   .hero-actions .btn { width: 100%; }

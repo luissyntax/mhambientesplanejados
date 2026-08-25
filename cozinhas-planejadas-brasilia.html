@@ -72,7 +72,9 @@
 
   <main id="conteudo">
     <section class="hero" style="min-height:72svh" aria-labelledby="page-title">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="img/01-cozinhas/2020-10-03-cozinha-cinza.jpg" alt="" width="1600" height="1200" decoding="async">
+      </div>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="eyebrow" style="color:var(--copper-light)">Brasília · Distrito Federal</p>
@@ -93,6 +95,30 @@
           <p>Atendemos Asa Norte, Asa Sul, Águas Claras, Lago Sul, Lago Norte, Guará, Taguatinga, Sudoeste, Noroeste e demais regiões do Distrito Federal.</p>
           <p><a href="index.html#processo">Veja como funciona nosso processo</a> · <a href="moveis-planejados-brasilia.html">Móveis planejados em Brasília</a> · <a href="marcenaria-brasilia.html">Marcenaria em Brasília</a></p>
         </article>
+
+        <ul class="page-gallery" aria-label="Fotos de cozinhas planejadas">
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/01-cozinhas/2020-10-03-cozinha-cinza.jpg" data-caption="Cozinha planejada">
+                <img src="img/01-cozinhas/2020-10-03-cozinha-cinza.jpg" alt="Cozinha planejada cinza com nichos de madeira" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/06-lavanderia-gourmet/2020-10-03-area-gourmet.jpg" data-caption="Área gourmet">
+                <img src="img/06-lavanderia-gourmet/2020-10-03-area-gourmet.jpg" alt="Área gourmet planejada com churrasqueira e ilha" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/01-cozinhas/2021-11-08-cozinha-fendi.jpg" data-caption="Cozinha planejada fendi">
+                <img src="img/01-cozinhas/2021-11-08-cozinha-fendi.jpg" alt="Cozinha planejada em tom fendi com granito preto" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -107,6 +133,12 @@
       <p class="footer-copy"><small>&copy; <span id="ano"></span> MH Ambientes Planejados. Brasília — DF.</small></p>
     </div>
   </footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <form method="dialog">
+      <button class="lightbox-close" type="submit" aria-label="Fechar foto">×</button>
+    </form>
+    <img src="" alt="">
+  </dialog>
   <script src="./main.js" defer></script>
 </body>
 </html>

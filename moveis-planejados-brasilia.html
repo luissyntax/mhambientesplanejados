@@ -72,7 +72,9 @@
 
   <main id="conteudo">
     <section class="hero" style="min-height:72svh" aria-labelledby="page-title">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="img/02-dormitorios/2020-05-11-dormitorio-guarda-roupa.jpg" alt="" width="1600" height="1200" decoding="async">
+      </div>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="eyebrow" style="color:var(--copper-light)">Brasília · Distrito Federal</p>
@@ -93,6 +95,51 @@
           <p>Seja um guarda-roupa na Asa Sul, um closet em Águas Claras ou um home office no Lago Norte — o foco é funcionalidade com acabamento de alto padrão.</p>
           <p><a href="cozinhas-planejadas-brasilia.html">Cozinhas planejadas em Brasília</a> · <a href="marcenaria-brasilia.html">Marcenaria em Brasília</a> · <a href="index.html#faq">Perguntas frequentes</a></p>
         </article>
+
+        <ul class="page-gallery" aria-label="Fotos de móveis planejados">
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/02-dormitorios/2020-05-11-dormitorio-guarda-roupa.jpg" data-caption="Dormitório planejado">
+                <img src="img/02-dormitorios/2020-05-11-dormitorio-guarda-roupa.jpg" alt="Dormitório com guarda-roupa espelhado" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/03-closets/2020-10-03-closet-home-office.jpg" data-caption="Closet planejado">
+                <img src="img/03-closets/2020-10-03-closet-home-office.jpg" alt="Closet planejado com bancada" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/04-home-office/2019-12-18-home-office-ripado.jpg" data-caption="Home office">
+                <img src="img/04-home-office/2019-12-18-home-office-ripado.jpg" alt="Home office com painel ripado" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/05-salas/2020-05-11-sala-tv-ripado.jpg" data-caption="Sala planejada">
+                <img src="img/05-salas/2020-05-11-sala-tv-ripado.jpg" alt="Sala com painel de TV ripado" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/02-dormitorios/2020-05-11-penteadeira.jpg" data-caption="Penteadeira">
+                <img src="img/02-dormitorios/2020-05-11-penteadeira.jpg" alt="Penteadeira planejada com iluminação" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/05-salas/2019-11-30-sala-tv-ripado.jpg" data-caption="Painel de TV">
+                <img src="img/05-salas/2019-11-30-sala-tv-ripado.jpg" alt="Painel de TV ripado com LED" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -107,6 +154,12 @@
       <p class="footer-copy"><small>&copy; <span id="ano"></span> MH Ambientes Planejados. Brasília — DF.</small></p>
     </div>
   </footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <form method="dialog">
+      <button class="lightbox-close" type="submit" aria-label="Fechar foto">×</button>
+    </form>
+    <img src="" alt="">
+  </dialog>
   <script src="./main.js" defer></script>
 </body>
 </html>

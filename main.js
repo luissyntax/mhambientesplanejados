@@ -107,4 +107,22 @@
       window.open(waUrl(parts.join("\n")), "_blank", "noopener,noreferrer");
     });
   }
+
+  /* Lightbox do portfólio */
+  const lightbox = document.getElementById("lightbox");
+  if (lightbox) {
+    const lightboxImg = lightbox.querySelector("img");
+    document.querySelectorAll("[data-lightbox]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const src = btn.getAttribute("data-lightbox");
+        const caption = btn.getAttribute("data-caption") || "";
+        lightboxImg.src = src;
+        lightboxImg.alt = caption;
+        if (typeof lightbox.showModal === "function") lightbox.showModal();
+      });
+    });
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) lightbox.close();
+    });
+  }
 })();

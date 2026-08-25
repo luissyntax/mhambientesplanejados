@@ -72,7 +72,9 @@
 
   <main id="conteudo">
     <section class="hero" style="min-height:72svh" aria-labelledby="page-title">
-      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-bg" aria-hidden="true">
+        <img src="img/06-lavanderia-gourmet/2020-10-03-area-gourmet.jpg" alt="" width="1600" height="1200" decoding="async">
+      </div>
       <div class="hero-grain" aria-hidden="true"></div>
       <div class="hero-content">
         <p class="eyebrow" style="color:var(--copper-light)">Brasília · Distrito Federal</p>
@@ -93,6 +95,30 @@
           <p>Atendemos todo o DF com visita técnica, projeto claro e instalação profissional.</p>
           <p><a href="moveis-planejados-brasilia.html">Móveis planejados em Brasília</a> · <a href="cozinhas-planejadas-brasilia.html">Cozinhas planejadas</a> · <a href="index.html#regiao">Regiões atendidas</a></p>
         </article>
+
+        <ul class="page-gallery" aria-label="Fotos de marcenaria">
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/06-lavanderia-gourmet/2020-10-03-area-gourmet.jpg" data-caption="Área gourmet">
+                <img src="img/06-lavanderia-gourmet/2020-10-03-area-gourmet.jpg" alt="Área gourmet com marcenaria sob medida" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/05-salas/2019-11-30-sala-tv-ripado.jpg" data-caption="Painel de TV">
+                <img src="img/05-salas/2019-11-30-sala-tv-ripado.jpg" alt="Painel de TV ripado executado em marcenaria" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+          <li>
+            <figure>
+              <button type="button" data-lightbox="img/07-comercial/2021-03-17-consultorio.jpg" data-caption="Consultório planejado">
+                <img src="img/07-comercial/2021-03-17-consultorio.jpg" alt="Consultório com marcenaria planejada" width="800" height="600" loading="lazy" decoding="async">
+              </button>
+            </figure>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
@@ -107,6 +133,12 @@
       <p class="footer-copy"><small>&copy; <span id="ano"></span> MH Ambientes Planejados. Brasília — DF.</small></p>
     </div>
   </footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <form method="dialog">
+      <button class="lightbox-close" type="submit" aria-label="Fechar foto">×</button>
+    </form>
+    <img src="" alt="">
+  </dialog>
   <script src="./main.js" defer></script>
 </body>
 </html>
