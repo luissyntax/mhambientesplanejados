@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const WHATSAPP_NUMBER = "5561981530190";
+  const WHATSAPP_NUMBER = "5561996793820";
 
   const header = document.querySelector(".site-header");
   const toggle = document.querySelector(".nav-toggle");
